@@ -1,4 +1,34 @@
+//path: .vscode/extensions.json
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+		"vsls-contrib.gistfs",
+		"johnpapa.angular-essentials",
+		"johnpapa.angular2",
+		"angular.ng-template",
+		"cyrilletuzi.angular-schematics",
+		"pkief.material-icon-theme",
+		"naumovs.color-highlight",
+		"joy-yu.css-snippets",
+		"pushqrdx.inline-html",
+		"xabikos.javascriptsnippets",
+		"huacat.office-theme",
+    "christian-kohler.npm-intellisense",
+		"esbenp.prettier-vscode",
+		"ms-ceintl.vscode-language-pack-de",
+		"dbaeumer.vscode-eslint",
+		"codeium.codeium",
+		"mechatroner.rainbow-csv"
+		// "zignd.html-css-class-completion",
+		// "ritwickdey.liveserver",
+		// "ecmel.vscode-html-css",
+		// "github.copilot-chat",
+		// "visualstudioexptteam.intellicode-api-usage-examples",
+		// "visualstudioexptteam.vscodeintellicode",
+		// "eamodio.gitlens",
+	],
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": []
 }
