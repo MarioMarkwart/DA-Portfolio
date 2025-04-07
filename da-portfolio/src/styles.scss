@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'FiraCode-400';
+    src: url('../public/assets/font/FiraCode-Regular.ttf');
+}
+
+// @font-face {
+//     font-family: 'FiraCode-500';
+//     src: url('../public/assets/fonts/FiraCode-Medium.ttf');
+// }
+
+// @font-face {
+//     font-family: 'FiraCode-600';
+//     src: url('../public/assets/fonts/FiraCode-SemiBold.ttf');
+// }
+
+@font-face {
+    font-family: 'FiraCode-700';
+    src: url('/public/assets/fonts/FiraCode-Bold.ttf');
+}
