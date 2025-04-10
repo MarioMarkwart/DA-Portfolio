@@ -1,0 +1,56 @@
+@mixin button-animation($color: #3DCFB6) {
+    animation: slideText 2s linear infinite;
+  
+    @keyframes slideText {
+      0% {
+        transform: translateX(0);
+        color: white;
+      }
+      40% {
+        color: $color;
+      }
+      50% {
+        transform: translateX(-100%);
+        color: $color;
+      }
+      60% {
+        transform: translateX(100%);
+        color: $color;
+      }
+      100% {
+        transform: translateX(0);
+        color: white;
+      }
+    }
+  }
+  
+  button {
+    position: relative;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+  
+    span {
+      position: relative;
+      transition: transform 0.5s ease, color 0.3s ease;
+      display: inline-block;
+    }
+  
+    &:hover {
+      border-color: #3DCFB6;
+  
+      span {
+        @include button-animation();
+  
+        &:nth-child(n) {
+          animation-delay: calc(0.1s * (n - 1));
+        }
+      }
+    }
+  }
