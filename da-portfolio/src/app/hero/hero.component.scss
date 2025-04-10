@@ -9,4 +9,27 @@ section {
 	height: calc(100vh - var(--header-height));
 	max-height: calc(900px - var(--header-height));
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.title{
+		color: white;
+		display: flex;
+		align-items: center;
+		
+		flex-direction: column;
+		gap: 12px;
+		
+		h1{
+			font-family: 'karla';
+			letter-spacing: -0.025em;
+		}
+		
+		h2{
+			font-family: "FiraCode-400";
+
+		}
+
+	}
 }

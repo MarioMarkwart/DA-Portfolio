@@ -12,7 +12,12 @@ html {
 
 @font-face {
 	font-family: "FiraCode-400";
-	src: url("../public/assets/font/FiraCode-Regular.ttf");
+	src: url("../public/assets/font/FiraCode-Light.ttf");
+}
+
+@font-face{
+	font-family: 'karla';
+	src: url('../public/assets/font/Karla-Regular.ttf');
 }
 
 // @font-face {
@@ -28,4 +33,12 @@ html {
 @font-face {
 	font-family: "FiraCode-700";
 	src: url("/public/assets/fonts/FiraCode-Bold.ttf");
+}
+
+h1{
+	font-size: 128px;
+}
+
+h2{
+	font-size: 40px;
 }
