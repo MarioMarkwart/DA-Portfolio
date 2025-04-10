@@ -1,6 +1,15 @@
+:host {
+  --main-clr: #0099ff;
+}
+
 main {
   font-family: "FiraCode-400";
-  background-color: black;
+  background: rgb(29, 29, 29);
+  background: linear-gradient(
+    180deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(7, 57, 48, 1) 99%
+  );
   height: 100px;
   width: 100%;
   display: flex;
