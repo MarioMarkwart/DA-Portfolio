@@ -1,11 +1,10 @@
-section{
-    background: linear-gradient(
-        0deg,
-        rgba(29, 29, 29, 1) 0%,
-        rgba(7, 57, 48, 1) 99%
-      );
+section {
+	background: linear-gradient(
+		0deg,
+		rgba(29, 29, 29, 1) 0%,
+		rgba(7, 57, 48, 1) 99%
+	);
 
-      height: calc(100vh - 100px);
-      width: 100%;
-
+	height: calc(100vh - var(--header-height));
+	width: 100%;
 }
