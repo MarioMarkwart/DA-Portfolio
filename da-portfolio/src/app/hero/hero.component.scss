@@ -1,10 +1,12 @@
 section {
 	background: linear-gradient(
-		0deg,
-		rgba(29, 29, 29, 1) 0%,
-		rgba(7, 57, 48, 1) 99%
+		45deg,
+		#1C1C1C 40%,
+		#08463B 120%,
+		// rgba(7, 57, 48, 1) 100%
 	);
 
 	height: calc(100vh - var(--header-height));
+	max-height: calc(900px - var(--header-height));
 	width: 100%;
 }
