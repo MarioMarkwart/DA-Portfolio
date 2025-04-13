@@ -43,7 +43,7 @@
     }
   
     &:hover {
-      border-color: #3DCFB6;
+      border-color: var(--main-hightlight-clr);
   
       span {
         @include button-animation();

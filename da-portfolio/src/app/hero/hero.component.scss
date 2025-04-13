@@ -32,9 +32,15 @@ section {
 			font-family: "FiraCode-400";
 		}
 	}
-	.buttons{
+	.buttons {
 		display: flex;
 		flex-direction: row;
 		gap: 48px;
 	}
 }
+// app-marquee {
+// 	position: absolute;
+// 	width: calc(100% + 3px);
+// 	overflow-x:hidden;
+// 	z-index: 100;
+// }

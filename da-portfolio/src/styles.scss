@@ -8,6 +8,7 @@ html {
 }
 :root {
 	--header-height: 100px;
+	--main-hightlight-clr: #3dcfb6;
 }
 
 @font-face {
@@ -15,9 +16,9 @@ html {
 	src: url("../public/assets/font/FiraCode-Light.ttf");
 }
 
-@font-face{
-	font-family: 'karla';
-	src: url('../public/assets/font/Karla-Regular.ttf');
+@font-face {
+	font-family: "karla";
+	src: url("../public/assets/font/Karla-Regular.ttf");
 }
 
 // @font-face {
@@ -35,10 +36,10 @@ html {
 	src: url("/public/assets/fonts/FiraCode-Bold.ttf");
 }
 
-h1{
+h1 {
 	font-size: 128px;
 }
 
-h2{
+h2 {
 	font-size: 40px;
 }
