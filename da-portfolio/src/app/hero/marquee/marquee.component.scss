@@ -7,38 +7,38 @@
 	width: 100%;
 	height: 60px;
 	overflow: hidden;
-	position: relative;
-	background-color: rgba(255,255,255,12%);
+	background-color: rgba(255, 255, 255, 12%);
 	transform: rotate(-3deg);
-	overflow: hidden;
-	// TODO: make it more than 100% so no edge is visible
 }
 
 .marquee {
-	font-size: 32px;
-	font-family: Karla;
-	font-weight: 700;
-	color: var(--main-hightlight-clr);
-	backdrop-filter: blur(20px);
-	display: inline-block;
-	white-space: nowrap;
-	animation: marquee-animation 10s linear infinite;
-	display:flex;
+	display: flex;
+	width: fit-content;
+	animation: marquee-animation 20s linear infinite;
+  }
+
+.marquee-content {
+	display: flex;
+	width: 50%; // wichtig, damit 2x 50% == 100% und keine Lücke
 	align-items: center;
 	gap: 60px;
-	
-	img{
+	font-size: 32px;
+	font-family: Karla;
+	font-weight: 400;
+	color: var(--main-hightlight-clr);
+	white-space: nowrap;
+
+	img {
 		width: 8px;
 		height: 8px;
 	}
-
 }
 
 @keyframes marquee-animation {
 	0% {
-		transform: translateX(150%);
+		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(-200%);
+		transform: translateX(-50%);
 	}
 }

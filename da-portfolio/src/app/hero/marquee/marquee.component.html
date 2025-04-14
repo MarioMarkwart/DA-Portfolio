@@ -1,7 +1,19 @@
 <div class="marquee-wrapper">
 	<div class="marquee">
-		@for (item of marqueeList; track item){
-			<span>{{item}}</span><img src="assets/img/buttons/radio-button-unchecked.png">
-		}
+		<!-- Duplizierte Liste für nahtlosen Loop -->
+		<div class="marquee-content">
+			@for (item of marqueeList; track item; let lastIdx = $last){
+			<span>{{ item }}</span>
+			@if (!lastIdx){
+			<img src="assets/img/buttons/radio-button-unchecked.png" />
+			} }
+		</div>
+		<div class="marquee-content">
+			@for (item of marqueeList; track item; let lastIdx = $last){
+			<span>{{ item }}</span>
+			@if (!lastIdx){
+			<img src="assets/img/buttons/radio-button-unchecked.png" />
+			} }
+		</div>
 	</div>
 </div>
