@@ -8,23 +8,37 @@
 	height: 60px;
 	overflow: hidden;
 	position: relative;
-	background-color: #f0f0f0;
+	background-color: rgba(255,255,255,12%);
 	transform: rotate(-3deg);
 	overflow: hidden;
 	// TODO: make it more than 100% so no edge is visible
 }
 
 .marquee {
+	font-size: 32px;
+	font-family: Karla;
+	font-weight: 700;
+	color: var(--main-hightlight-clr);
+	backdrop-filter: blur(20px);
 	display: inline-block;
 	white-space: nowrap;
 	animation: marquee-animation 10s linear infinite;
+	display:flex;
+	align-items: center;
+	gap: 60px;
+	
+	img{
+		width: 8px;
+		height: 8px;
+	}
+
 }
 
 @keyframes marquee-animation {
 	0% {
-		transform: translateX(350%);
+		transform: translateX(150%);
 	}
 	100% {
-		transform: translateX(-300%);
+		transform: translateX(-200%);
 	}
 }

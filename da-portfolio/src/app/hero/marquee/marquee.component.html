@@ -1,5 +1,7 @@
 <div class="marquee-wrapper">
 	<div class="marquee">
-		<span>Das ist mein schöner Marquee-Text, der endlos läuft!</span>
+		@for (item of marqueeList; track item){
+			<span>{{item}}</span><img src="assets/img/buttons/radio-button-unchecked.png">
+		}
 	</div>
 </div>
