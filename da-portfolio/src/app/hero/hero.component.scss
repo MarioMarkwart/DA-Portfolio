@@ -2,8 +2,7 @@ section {
 	background: linear-gradient(
 		45deg,
 		#1c1c1c 40%,
-		#08463b 120%,
-		// rgba(7, 57, 48, 1) 100%
+		#08463b 120% // rgba(7, 57, 48, 1) 100%
 	);
 
 	height: calc(100vh - var(--header-height));

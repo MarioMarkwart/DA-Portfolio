@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SkillsetComponent } from './skillset.component';
 
 describe('SkillsetComponent', () => {
-  let component: SkillsetComponent;
-  let fixture: ComponentFixture<SkillsetComponent>;
+	let component: SkillsetComponent;
+	let fixture: ComponentFixture<SkillsetComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [SkillsetComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [SkillsetComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(SkillsetComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(SkillsetComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

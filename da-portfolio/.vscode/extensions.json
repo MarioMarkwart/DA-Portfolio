@@ -15,7 +15,7 @@
 		"pushqrdx.inline-html",
 		"xabikos.javascriptsnippets",
 		"huacat.office-theme",
-    "christian-kohler.npm-intellisense",
+		"christian-kohler.npm-intellisense",
 		"esbenp.prettier-vscode",
 		"ms-ceintl.vscode-language-pack-de",
 		"dbaeumer.vscode-eslint",

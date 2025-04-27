@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from "../button/button.component";
-import { MarqueeComponent } from "./marquee/marquee.component";
-import { SkillsetComponent } from "../skillset/skillset.component";
+import { ButtonComponent } from '../button/button.component';
+import { MarqueeComponent } from './marquee/marquee.component';
+import { SkillsetComponent } from '../skillset/skillset.component';
 
 @Component({
+	standalone: true,
 	selector: 'app-hero',
-	imports: [ButtonComponent, MarqueeComponent],
+	imports: [ButtonComponent, MarqueeComponent, SkillsetComponent],
 	templateUrl: './hero.component.html',
 	styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-
-	checkWork()	{
+	checkWork() {
 		console.log('check work');
 	}
 
-	contact()	{
+	contact() {
 		console.log('contact');
 	}
 }

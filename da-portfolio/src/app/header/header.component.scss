@@ -1,11 +1,7 @@
 main {
 	font-family: "FiraCode-400";
 	background: rgb(29, 29, 29);
-	background: linear-gradient(
-		45deg,
-        #1C1C1C 40%,
-		#08463B 120%,
-	);
+	background: linear-gradient(45deg, #1c1c1c 40%, #08463b 120%);
 	height: var(--header-height);
 	width: 100%;
 	display: flex;
