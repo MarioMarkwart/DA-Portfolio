@@ -1,11 +1,17 @@
+$mainBackgroundColor: #1B1C1D;
+$headerHeight: 100px;
+$mainHighlightColor: #3dcfb6;
+
 html {
 	scroll-behavior: smooth;
 }
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 :root {
 	--header-height: 100px;
 	--main-hightlight-clr: #3dcfb6;
@@ -48,5 +54,5 @@ h2 {
 	width: 8px;
 	height: 8px;
 	border-radius: 100%;
-	background: var(--main-hightlight-clr);
+	background: $mainHighlightColor
 }

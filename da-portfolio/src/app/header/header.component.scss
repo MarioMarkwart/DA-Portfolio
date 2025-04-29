@@ -1,8 +1,10 @@
+@import './../../styles.scss';
+
 main {
 	font-family: "FiraCode-400";
 	background: rgb(29, 29, 29);
 	background: linear-gradient(45deg, #1c1c1c 40%, #08463b 120%);
-	height: var(--header-height);
+	height: $headerHeight;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -49,7 +51,6 @@ main {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	color: var(--main-color);
 
 	&:hover {
 		cursor: pointer;
