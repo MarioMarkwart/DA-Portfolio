@@ -1,3 +1,5 @@
+@use '../../styles.scss' as styles;
+
 @mixin button-animation($color: #3dcfb6) {
 	animation: slideText 2s linear infinite;
 
@@ -45,7 +47,7 @@ button {
 	}
 
 	&:hover {
-		border-color: var(--main-hightlight-clr);
+		border-color: var(styles.$mainHighlightColor);
 
 		span {
 			@include button-animation();

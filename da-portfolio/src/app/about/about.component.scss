@@ -1,12 +1,13 @@
-@import "./../../styles.scss";
+@use "./../../styles.scss" as styles;
 
 section {
 	height: 100vh;
 	width: 100%;
-	background-color: $mainBackgroundColor;
+	background-color: styles.$mainBackgroundColor;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	gap: 96px;
 }
 
 .image-container {
@@ -14,16 +15,19 @@ section {
 	width: 568px;
 	height: 568px;
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url("../../../public/assets/img/portrait_background.png");
-		background-size: cover;
-		transform: translate(-46px, 30px);
+	&:hover {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("../../../public/assets/img/portrait_background.png");
+			background-size: cover;
+			transform: translate(-46px, 30px);
+			border-radius: 30px;
+		}
 	}
 }
 

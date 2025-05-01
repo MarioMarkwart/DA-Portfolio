@@ -1,6 +1,7 @@
 $mainBackgroundColor: #1B1C1D;
 $headerHeight: 100px;
 $mainHighlightColor: #3dcfb6;
+$mainBoxColor: #3dcfb61a;
 
 html {
 	scroll-behavior: smooth;
@@ -27,6 +28,10 @@ html {
 	src: url("../public/assets/font/Karla-Regular.ttf");
 }
 
+@font-face {
+	font-family: "FiraCode-700";
+	src: url("../public/assets/font/FiraCode-Bold.ttf");
+}
 // @font-face {
 //     font-family: 'FiraCode-500';
 //     src: url('../public/assets/fonts/FiraCode-Medium.ttf');
@@ -37,10 +42,6 @@ html {
 //     src: url('../public/assets/fonts/FiraCode-SemiBold.ttf');
 // }
 
-@font-face {
-	font-family: "FiraCode-700";
-	src: url("/public/assets/fonts/FiraCode-Bold.ttf");
-}
 
 h1 {
 	font-size: 128px;

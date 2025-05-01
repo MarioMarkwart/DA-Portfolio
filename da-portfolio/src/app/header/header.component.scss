@@ -1,10 +1,10 @@
-@import './../../styles.scss';
+@use './../../styles.scss' as styles;
 
 main {
 	font-family: "FiraCode-400";
 	background: rgb(29, 29, 29);
 	background: linear-gradient(45deg, #1c1c1c 40%, #08463b 120%);
-	height: $headerHeight;
+	height: styles.$headerHeight;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
