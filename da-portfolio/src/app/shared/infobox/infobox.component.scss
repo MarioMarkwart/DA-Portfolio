@@ -1,43 +1,56 @@
 @use "../../../styles.scss" as styles;
 
-section {
-	background-color: styles.$mainBoxColor;
-	border: 1px solid styles.$mainHighlightColor;
-	color: white;
-	font-family: "FiraCode-400";
-	width: 360px;
-	height: 360px;
-	border-radius: 30px;
+main {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	padding: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: transform 0.2s;
-	gap: 32px;
+	gap: 26px;
+	transform: translateY(100px);
 
+	h3,
 	h2 {
-		font-family: "FiraCode-700";
-		font-size: 64px;
 		color: styles.$mainHighlightColor;
-		font-weight: 700 !important;
 	}
 
-	> div {
+	& > section {
+		position: relative;
+		background-color: styles.$mainBoxColor;
+		border: 1px solid styles.$mainHighlightColor;
+		color: white;
+		font-family: "FiraCode-400";
+		width: 360px;
+		height: 360px;
+		border-radius: 30px;
 		display: flex;
-		flex-direction: row;
-		gap: 16px;
-		> img {
-			width: 32px;
-			height: 32px;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 20px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		transition: transform 0.2s;
+		gap: 32px;
+
+		h2 {
+			font-family: "FiraCode-700";
+			font-size: 64px;
+			color: styles.$mainHighlightColor;
+			font-weight: 700 !important;
 		}
 
-		div {
-			font-family: Karla;
-			font-size: 20px;
-			letter-spacing: 2px;
-			line-height: 125%;
+		> div {
+			display: flex;
+			flex-direction: row;
+			gap: 16px;
+			> img {
+				width: 32px;
+				height: 32px;
+			}
+
+			> div {
+				font-family: Karla;
+				font-size: 20px;
+				letter-spacing: 2px;
+				line-height: 125%;
+			}
 		}
 	}
 }

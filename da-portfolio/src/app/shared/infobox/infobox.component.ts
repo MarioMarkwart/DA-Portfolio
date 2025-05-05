@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './infobox.component.scss'
 })
 export class InfoboxComponent {
+  @Input() topic: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() icon: string = '';

@@ -1,23 +1,45 @@
-<section class="infobox" [style.width]="width" [style.height]="height">
-    <h2>{{ title }}</h2>
-    <p>{{ description }}</p>
+<main>
+	@if(topic){
+	<div class="topic">
+		<h3>{{ topic }}</h3>
+	</div>
+	}
+	<section class="infobox" [style.width]="width" [style.height]="height">
+		<h2>{{ title }}</h2>
+		<p>{{ description }}</p>
 
-    @if (location) {
-    <div>
-        <img [src]="locationIcon" alt="Location Icon" width="24" height="24">
-        <p>{{ location }}</p>
-    </div>
-    } @if (openMinded) {
-    <div>
-        <img [src]="openMindedIcon" alt="Open Minded Icon" width="24" height="24">
-        <p>{{ openMinded }}</p>
-    </div>
-    } @if (problemSolving) {
-    <div>
-        <img [src]="problemSolvingIcon" alt="Problem Solving Icon" width="24" height="24">
-        <p>{{ problemSolving }}</p>
-    </div>
-    }
+		@if (location) {
+		<div>
+			<img
+				[src]="locationIcon"
+				alt="Location Icon"
+				width="24"
+				height="24"
+			/>
+			<p>{{ location }}</p>
+		</div>
+		} @if (openMinded) {
+		<div>
+			<img
+				[src]="openMindedIcon"
+				alt="Open Minded Icon"
+				width="24"
+				height="24"
+			/>
+			<p>{{ openMinded }}</p>
+		</div>
+		} @if (problemSolving) {
+		<div>
+			<img
+				[src]="problemSolvingIcon"
+				alt="Problem Solving Icon"
+				width="24"
+				height="24"
+			/>
+			<p>{{ problemSolving }}</p>
+		</div>
+		}
 
-    <ng-content></ng-content>
-</section>
+		<ng-content></ng-content>
+	</section>
+</main>
