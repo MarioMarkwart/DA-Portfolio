@@ -1,0 +1,10 @@
+@use '../../styles.scss' as styles;
+
+section {
+	height: 100vh;
+	width: 100%;
+	background-color: styles.$mainBackgroundColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

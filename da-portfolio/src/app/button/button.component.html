@@ -1,4 +1,4 @@
-<button [type]="type" (click)="handleClick()">
+<button [type]="type" (click)="handleClick()" >
 	@for (char of label.split(""); track $index) {
 		<span>{{ char }}</span>
 	}

@@ -39,7 +39,22 @@
 			<p>{{ problemSolving }}</p>
 		</div>
 		}
-
-		<ng-content></ng-content>
+		@if (paragraph1) {
+			<p>{{ paragraph1 }}</p>
+		} @if (paragraph2) {
+		<p>{{ paragraph2 }}</p>
+	} @if (paragraph3) {
+		<p>{{ paragraph3 }}</p>
+	} @if (paragraph4) {
+		<p>{{ paragraph4 }}</p>
+	} @if (paragraph5) {
+		<p>{{ paragraph5 }}</p>
+	}
+	@if (buttonText) {
+	<app-button label="{{ buttonText }}" [link]="buttonLink">{{
+		buttonText
+	}}</app-button>
+	}
+	<ng-content></ng-content>
 	</section>
 </main>

@@ -9,9 +9,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ButtonComponent {
 	@Input() label: string = 'Button';
 	@Input() type: 'button' | 'submit' = 'button';
+	@Input() link: string = '';
 	@Output() clicked = new EventEmitter<void>();
 
 	handleClick() {
-		this.clicked.emit();
+		if (this.link) {
+			window.location.href = this.link;
+		} else {
+			this.clicked.emit();
+		}
 	}
 }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { InfoboxComponent } from "../shared/infobox/infobox.component";
 
 @Component({
 	standalone: true,
 	selector: 'app-skillset',
-	imports: [],
+	imports: [InfoboxComponent],
 	templateUrl: './skillset.component.html',
 	styleUrl: './skillset.component.scss',
 })

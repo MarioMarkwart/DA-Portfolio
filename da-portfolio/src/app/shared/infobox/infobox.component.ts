@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { ButtonComponent } from '../../button/button.component';
 
 @Component({
   standalone: true,
   selector: 'app-infobox',
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './infobox.component.html',
   styleUrl: './infobox.component.scss'
 })
@@ -17,6 +18,14 @@ export class InfoboxComponent {
   @Input() location: string = '';
   @Input() openMinded: string = '';
   @Input() problemSolving: string = '';
+  @Input() buttonText: string = '';
+  @Input() buttonLink: string = '';
+  @Input() paragraph1: string = '';
+  @Input() paragraph2: string = '';
+  @Input() paragraph3: string = '';
+  @Input() paragraph4: string = '';
+  @Input() paragraph5: string = '';
+
 
   locationIcon: string = 'assets/img/misc/location.png';
   openMindedIcon: string = 'assets/img/misc/cognition.png';
