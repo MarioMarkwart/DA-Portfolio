@@ -1,1 +1,12 @@
-<p>skill-item works!</p>
+<section>
+	@for (skill of skills; track skill) {
+	<div class="skill-item">
+		<div class="skill-item__icon">
+			<img [src]="skill.icon" alt="{{ skill.name }}" />
+		</div>
+		<div class="skill-item__name">
+			{{ skill.name }}
+		</div>
+	</div>
+	}
+</section>

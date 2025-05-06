@@ -15,6 +15,8 @@ export class InfoboxComponent {
   @Input() icon: string = '';
   @Input() width: string = '100%';
   @Input() height: string = '100%';
+  @Input() offsetX: string = '0';
+  @Input() offsetY: string = '0';
   @Input() location: string = '';
   @Input() openMinded: string = '';
   @Input() problemSolving: string = '';
