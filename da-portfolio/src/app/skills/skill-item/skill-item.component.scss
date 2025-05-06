@@ -1,20 +1,21 @@
 @use "../../../styles.scss" as styles;
 
 section {
+	transform: translateY(24px);
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 16px;
 	justify-content: center;
 	padding: 16px;
-
+	
 	@media (min-width: 600px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-
+	
 	@media (min-width: 900px) {
 		grid-template-columns: repeat(3, 1fr);
 	}
-
+	
 	.skill-item {
 		font-family: "FiraCode-400";
 		color: white;
