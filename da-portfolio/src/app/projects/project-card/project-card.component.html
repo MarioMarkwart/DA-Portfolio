@@ -1,1 +1,13 @@
-<p>project-card works!</p>
+<table>
+    <tr>
+        <td>
+            <span>{{ project.name }}</span>
+        </td>
+
+        <td>
+            @for (tech of project.technologies; track tech) {
+                <span>{{ tech }}</span> <span class="separator">|</span>
+            }
+        </td>
+    </tr>
+</table>

@@ -1,1 +1,10 @@
-<p>projects works!</p>
+<section>
+    <h3>Projects</h3>
+    <h1>Featured Projects</h1>
+
+    <p>Explore a selection of my work here Interact with projects to see my skills in action.</p>
+
+    @for (project of projects; track project.name) {
+        <app-project-card [project]="project"></app-project-card>
+    }
+</section>

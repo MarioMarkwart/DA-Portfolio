@@ -1,10 +1,29 @@
 import { Component } from '@angular/core';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @Component({
 	standalone: true,
 	selector: 'app-projects',
-	imports: [],
+	imports: [ProjectCardComponent],
 	templateUrl: './projects.component.html',
 	styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {}
+export class ProjectsComponent {
+
+	projects = [
+		{
+			name: 'Join',
+			technologies: ['HTML', 'CSS', 'Javascript','Firebase', ],
+			description: 'My personal portfolio website.',
+			image: 'assets/images/portfolio.png',
+			url: 'https://github.com/da-portfolio/da-portfolio',
+		},
+		{
+			name: 'Pokedex',
+			technologies: ['HTML', 'CSS', 'JavaScript'],
+			description: 'My personal portfolio website.',
+			image: 'assets/images/portfolio.png',
+			url: ''
+		}
+	]
+}

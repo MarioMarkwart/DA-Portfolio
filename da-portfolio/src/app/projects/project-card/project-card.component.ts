@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	standalone: true,
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 	templateUrl: './project-card.component.html',
 	styleUrl: './project-card.component.scss',
 })
-export class ProjectCardComponent {}
+export class ProjectCardComponent {
+	@Input() project: any;
+}

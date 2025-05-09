@@ -1,4 +1,4 @@
-$mainBackgroundColor: #1B1C1D;
+$mainBackgroundColor: #1b1c1d;
 $headerHeight: 100px;
 $mainHighlightColor: #3dcfb6;
 $mainBoxColor: #3dcfb61a;
@@ -42,24 +42,29 @@ html {
 //     src: url('../public/assets/fonts/FiraCode-SemiBold.ttf');
 // }
 
-
 h1 {
-	font-size: 128px;
+	font-family: "FiraCode-700";
+	font-size: 64px;
+	color: $mainHighlightColor;
+	font-weight: 700 !important;
 }
 
 h2 {
+	font-family: "FiraCode-400";
+	color: $mainHighlightColor;
 	font-size: 40px;
 }
 
-h3{
+h3 {
+	color: $mainHighlightColor;
 	font-family: "FiraCode-400";
 	font-size: 20px;
 	letter-spacing: -3%;
 	line-height: 100%;
 }
 .dot {
+	background: $mainHighlightColor;
 	width: 8px;
 	height: 8px;
 	border-radius: 100%;
-	background: $mainHighlightColor
 }
