@@ -1,13 +1,20 @@
-<table>
-    <tr>
-        <td>
-            <span>{{ project.name }}</span>
-        </td>
+<section>
+	<div class="project-card-table">
+		<div>
+			<span class="project-name">{{ project.name }}</span>
+		</div>
 
-        <td>
-            @for (tech of project.technologies; track tech) {
-                <span>{{ tech }}</span> <span class="separator">|</span>
-            }
-        </td>
-    </tr>
-</table>
+		<div>
+			@for (tech of project.technologies; track tech;) {
+			<span class="tech">{{ tech }}</span>
+			@if(!($last)){
+			<span class="separator">|</span>
+			} 
+		}
+		</div>
+	</div>
+	<div class="project-card-image">
+		<img src="{{ project.image }}" alt="{{ project.name }}" />
+	</div>
+</section>
+

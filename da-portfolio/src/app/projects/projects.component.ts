@@ -13,16 +13,23 @@ export class ProjectsComponent {
 	projects = [
 		{
 			name: 'Join',
-			technologies: ['HTML', 'CSS', 'Javascript','Firebase', ],
+			technologies: ['HTML', 'CSS', 'Javascript', 'Firebase',],
 			description: 'My personal portfolio website.',
-			image: 'assets/images/portfolio.png',
+			image: 'assets/img/portfolio.png',
 			url: 'https://github.com/da-portfolio/da-portfolio',
 		},
 		{
 			name: 'Pokedex',
 			technologies: ['HTML', 'CSS', 'JavaScript'],
 			description: 'My personal portfolio website.',
-			image: 'assets/images/portfolio.png',
+			image: 'assets/img/portfolio.png',
+			url: ''
+		},
+		{
+			name: 'El Pollo Loco',
+			technologies: ['HTML', 'CSS', 'JavaScript'],
+			description: 'Jump\'n\'run-Game El Pollo Loco.',
+			image: 'assets/img/projects/ElPolloLoco.png',
 			url: ''
 		}
 	]
