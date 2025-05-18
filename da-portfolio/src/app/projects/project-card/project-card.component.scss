@@ -23,6 +23,19 @@ section {
         cursor: pointer;
     }
 
+&:hover .project-name::after {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 4px;
+	background-image: url("../../../../public/assets/img/buttons/arrow_outward.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+
 	> .project-card-table {
 		flex: 2;
 		display: flex;
