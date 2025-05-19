@@ -1,0 +1,10 @@
+@use "../../styles.scss" as styles;
+
+section{
+    background-color: styles.$mainBackgroundColor;
+}
+
+h1{
+    font-size: 32px;
+    letter-spacing: 0%;
+}
