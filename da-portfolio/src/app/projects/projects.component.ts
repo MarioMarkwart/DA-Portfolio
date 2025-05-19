@@ -29,7 +29,7 @@ export class ProjectsComponent {
 			name: 'El Pollo Loco',
 			technologies: ['HTML', 'CSS', 'JavaScript'],
 			description: 'Jump\'n\'run-Game El Pollo Loco.',
-			image: 'assets/img/projects/ElPolloLoco.png',
+			image: 'assets/img/projects/portfolio.png',
 			url: ''
 		}
 	]
