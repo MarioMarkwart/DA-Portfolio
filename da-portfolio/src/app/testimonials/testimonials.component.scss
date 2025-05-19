@@ -1,7 +1,25 @@
 @use "../../styles.scss" as styles;
 
 section{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: styles.$mainBackgroundColor;
+    gap: 50px;
+    align-items: center;
+
+    .single-feedback-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+    }
+}
+
+.not-in-focus{
+    transform: scale(.9);
+    transition: transform 0.3s ease;
+    background-color: linear-gradient(90deg, rgba(61,207,182,1) 0%, rgba(61,207,182,0) 100%) !important;
 }
 
 h1{

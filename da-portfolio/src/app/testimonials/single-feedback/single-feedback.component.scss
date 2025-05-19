@@ -1,0 +1,12 @@
+@use '../../../styles.scss' as styles;
+
+.feedback-card{
+    color: white;
+    background:styles.$mainHoverColor;
+    border: 1px solid styles.$mainHighlightColor;
+    width: 630px;
+    height: 290px;
+    border-radius: 25px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
