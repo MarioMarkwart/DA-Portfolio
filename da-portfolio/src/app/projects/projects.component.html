@@ -1,23 +1,20 @@
 <section>
-	<header>
-		<h3>Projects</h3>
-		<h1>Featured Projects</h1>
-
-		<p>
-			Explore a selection of my work here Interact with projects to see my
-			skills in action.
-		</p>
-	</header>
-
-	<main>
-		<div>
-			@for (project of projects; track project.name) {
-			<app-project-card [project]="project"></app-project-card>
-			}
-		</div>
-
-		<div>
-			<app-project-img></app-project-img>
-		</div>
-	</main>
-</section>
+    <header>
+      </header>
+  
+    <main>
+      <div>
+        @for (project of projects; track project.name) {
+          <app-project-card 
+            [project]="project"
+            (mouseenter)="onProjectHover(project)" 
+            (mouseleave)="onMouseLeave()"
+          ></app-project-card>
+        }
+      </div>
+  
+      <div>
+        <app-project-img [project]="selectedProject"></app-project-img>
+      </div>
+    </main>
+  </section>

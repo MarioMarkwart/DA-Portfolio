@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './project-img.component.scss'
 })
 export class ProjectImgComponent {
-
+  @Input() project: any | null; 
 }

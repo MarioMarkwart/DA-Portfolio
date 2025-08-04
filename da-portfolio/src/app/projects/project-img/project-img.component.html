@@ -1,1 +1,5 @@
-<p>project-img works!</p>
+<section>
+	@if (project) {
+	<img [src]="project.image" [alt]="project.name" />
+	}
+</section>

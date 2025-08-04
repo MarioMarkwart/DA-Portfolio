@@ -10,11 +10,12 @@ import { ProjectImgComponent } from './project-img/project-img.component';
 	styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+	selectedProject: any | null = null;
 
 	projects = [
 		{
 			name: 'Join',
-			technologies: ['HTML', 'CSS', 'Javascript', 'Firebase',],
+			technologies: ['HTML', 'CSS', 'Javascript', 'Firebase'],
 			description: 'My personal portfolio website.',
 			image: 'assets/img/portfolio.png',
 			url: 'https://github.com/da-portfolio/da-portfolio',
@@ -23,15 +24,23 @@ export class ProjectsComponent {
 			name: 'Pokedex',
 			technologies: ['HTML', 'CSS', 'JavaScript'],
 			description: 'My personal portfolio website.',
-			image: 'assets/img/portfolio.png',
-			url: ''
+			image: 'assets/img/projects/Pokedex.png',
+			url: '',
 		},
 		{
 			name: 'El Pollo Loco',
 			technologies: ['HTML', 'CSS', 'JavaScript'],
-			description: 'Jump\'n\'run-Game El Pollo Loco.',
-			image: 'assets/img/projects/portfolio.png',
-			url: ''
-		}
-	]
+			description: "Jump'n'run-Game El Pollo Loco.",
+			image: 'assets/img/projects/ElPolloLoco.png',
+			url: '',
+		},
+	];
+
+	onProjectHover(project: any) {
+		this.selectedProject = project;
+	}
+
+	onMouseLeave() {
+		this.selectedProject = null;
+	}
 }
