@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { ProjectImgComponent } from './project-img/project-img.component';
 
 @Component({
 	standalone: true,
 	selector: 'app-projects',
-	imports: [ProjectCardComponent],
+	imports: [ProjectCardComponent, ProjectImgComponent],
 	templateUrl: './projects.component.html',
 	styleUrl: './projects.component.scss',
 })

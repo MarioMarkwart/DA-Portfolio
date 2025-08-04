@@ -1,5 +1,12 @@
 @use "../../styles.scss" as styles;
 
+main{
+	display: flex;
+	
+	div{
+		flex: 2
+	}
+}
 section {
 	background-color: styles.$mainBackgroundColor;
 
