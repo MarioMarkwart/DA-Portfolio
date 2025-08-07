@@ -2,9 +2,15 @@
 
 main{
 	display: flex;
+	gap: 72px;
 	
-	div{
-		flex: 2
+	div:first-child{
+		flex: 1
+	}
+
+	div:last-child{
+		flex:0;
+		min-width: 408px;
 	}
 }
 section {

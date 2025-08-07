@@ -11,13 +11,14 @@ import { ProjectImgComponent } from './project-img/project-img.component';
 })
 export class ProjectsComponent {
 	selectedProject: any | null = null;
+	selectedIndex: number = 0;
 
 	projects = [
 		{
 			name: 'Join',
 			technologies: ['HTML', 'CSS', 'Javascript', 'Firebase'],
 			description: 'My personal portfolio website.',
-			image: 'assets/img/portfolio.png',
+			image: 'assets/img/projects/Join.png',
 			url: 'https://github.com/da-portfolio/da-portfolio',
 		},
 		{
@@ -36,8 +37,9 @@ export class ProjectsComponent {
 		},
 	];
 
-	onProjectHover(project: any) {
+	onProjectHover(project: any, index: number) {
 		this.selectedProject = project;
+		this.selectedIndex = index;
 	}
 
 	onMouseLeave() {

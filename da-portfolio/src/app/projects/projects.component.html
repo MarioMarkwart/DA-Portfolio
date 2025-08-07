@@ -1,20 +1,25 @@
 <section>
-    <header>
-      </header>
-  
-    <main>
-      <div>
-        @for (project of projects; track project.name) {
-          <app-project-card 
-            [project]="project"
-            (mouseenter)="onProjectHover(project)" 
-            (mouseleave)="onMouseLeave()"
-          ></app-project-card>
-        }
-      </div>
-  
-      <div>
-        <app-project-img [project]="selectedProject"></app-project-img>
-      </div>
-    </main>
-  </section>
+	<header></header>
+
+	<main>
+		<div>
+			@for (project of projects; track project.name; let i = $index) {
+			<app-project-card
+				[project]="project"
+				(mouseenter)="onProjectHover(project, i)"
+				(mouseleave)="onMouseLeave()"
+			></app-project-card>
+			}
+		</div>
+
+		<div>
+			@if (selectedProject) {
+			<app-project-img
+				[project]="selectedProject"
+				[index]="selectedIndex"
+				[total]="projects.length"
+			></app-project-img>
+			}
+		</div>
+	</main>
+</section>

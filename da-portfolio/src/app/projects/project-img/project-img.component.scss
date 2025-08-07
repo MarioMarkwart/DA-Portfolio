@@ -1,29 +1,39 @@
+$image-width: 296px;
+$image-height: 192px;
+
 section {
-	width: 90%;
-	height: 90%;
-	div {
-		position: relative;
-		width: 296px;
-		height: 192px;
+  width: 90%;
+  height: 90%;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 296px;
-			height: 192px;
-			background-image: url("../../../../public/assets/img/projects/hatching.png");
-			background-size: cover;
-			transform: translate(20px, 20px);
-			border-radius: 30px;
-		}
-	}
+  .image-container {
+    position: relative;
+    width: $image-width;
+    height: $image-height;
 
-	img {
-		position: relative;
-		z-index: 2;
-		width: 100%;
-		border-radius: 16px;
-	}
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $image-width;
+      height: $image-height;
+      background-image: url("../../../../public/assets/img/projects/hatching.png");
+      background-size: cover;
+      transform: translate(20px, 20px);
+      border-radius: 30px;
+      z-index: 1;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $image-width;
+      height: $image-height;
+      object-fit: cover;
+      border-radius: 16px;
+      z-index: 2;
+      display: block;
+    }
+  }
 }
