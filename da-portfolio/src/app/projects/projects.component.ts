@@ -37,6 +37,15 @@ export class ProjectsComponent {
 		},
 	];
 
+	technologies = {
+		"JavaScript": "da-portfolio/public/assets/img/projects/icons/icon-javascript.png",
+		"HTML": "da-portfolio/public/assets/img/projects/icons/icon-html.png",
+		"CSS": "da-portfolio/public/assets/img/projects/icons/icon-css.png",
+		"Firebase": "da-portfolio/public/assets/img/projects/icons/icon-firebase.png",
+		"Angular": "da-portfolio/public/assets/img/projects/icons/icon-angular.png",
+		"TypeScript": "da-portfolio/public/assets/img/projects/icons/icon-typescript.png",
+	}
+
 	onProjectHover(project: any, index: number) {
 		this.selectedProject = project;
 		this.selectedIndex = index;
