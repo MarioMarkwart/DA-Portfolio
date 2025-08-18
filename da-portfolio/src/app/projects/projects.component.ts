@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectImgComponent } from './project-img/project-img.component';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @Component({
 	standalone: true,
 	selector: 'app-projects',
-	imports: [ProjectCardComponent, ProjectImgComponent],
+	imports: [ProjectCardComponent, ProjectImgComponent, ProjectModalComponent],
 	templateUrl: './projects.component.html',
 	styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
 	selectedProject: any | null = null;
 	selectedIndex: number = 0;
+	showModal: boolean = false;
 
 	projects = [
 		{
@@ -53,5 +55,10 @@ export class ProjectsComponent {
 
 	onMouseLeave() {
 		this.selectedProject = null;
+	}
+
+	toggleModal(){
+		this.showModal = true;
+		// open modal
 	}
 }

@@ -1,6 +1,4 @@
 <section>
-	<header></header>
-
 	<main>
 		<div>
 			@for (project of projects; track project.name; let i = $index) {
@@ -8,6 +6,7 @@
 				[project]="project"
 				(mouseenter)="onProjectHover(project, i)"
 				(mouseleave)="onMouseLeave()"
+				(click)="toggleModal()"
 			></app-project-card>
 			}
 		</div>
@@ -22,4 +21,8 @@
 			}
 		</div>
 	</main>
+	@if (showModal){
+	<app-project-modal></app-project-modal>
+
+	}
 </section>
