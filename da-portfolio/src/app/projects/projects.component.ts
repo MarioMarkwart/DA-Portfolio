@@ -11,9 +11,13 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 	styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-	selectedProject: any | null = null;
+	selectedProject: any | null = null;   // für Hover-Bild
 	selectedIndex: number = 0;
+	
+	modalProject: any | null = null;      // für Modal
+	modalIndex: number = 0;
 	showModal: boolean = false;
+	
 
 	projects = [
 		{
@@ -40,25 +44,27 @@ export class ProjectsComponent {
 	];
 
 	technologies = {
-		"JavaScript": "da-portfolio/public/assets/img/projects/icons/icon-javascript.png",
-		"HTML": "da-portfolio/public/assets/img/projects/icons/icon-html.png",
-		"CSS": "da-portfolio/public/assets/img/projects/icons/icon-css.png",
-		"Firebase": "da-portfolio/public/assets/img/projects/icons/icon-firebase.png",
-		"Angular": "da-portfolio/public/assets/img/projects/icons/icon-angular.png",
-		"TypeScript": "da-portfolio/public/assets/img/projects/icons/icon-typescript.png",
+		"JavaScript": "assets/img/projects/icons/icon-javascript.png",
+		"HTML": "assets/img/projects/icons/icon-html.png",
+		"CSS": "assets/img/projects/icons/icon-css.png",
+		"Firebase": "assets/img/projects/icons/icon-firebase.png",
+		"Angular": "assets/img/projects/icons/icon-angular.png",
+		"TypeScript": "assets/img/projects/icons/icon-typescript.png",
 	}
 
 	onProjectHover(project: any, index: number) {
 		this.selectedProject = project;
 		this.selectedIndex = index;
-	}
-
-	onMouseLeave() {
+	  }
+	  
+	  onMouseLeave() {
 		this.selectedProject = null;
-	}
+	  }
 
-	toggleModal(){
+	  toggleModal(project: any, index: number) {
+		this.modalProject = project;
+		this.modalIndex = index;
 		this.showModal = true;
-		// open modal
-	}
+	  }
+	
 }
