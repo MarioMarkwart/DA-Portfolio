@@ -28,7 +28,7 @@
 
 button {
 	position: relative;
-	padding: 12px 24px;
+	padding: 13px 24px;
 	border: 2px solid white;
 	border-radius: 25px;
 	background-color: transparent;
@@ -37,6 +37,17 @@ button {
 	font-weight: 500;
 	cursor: pointer;
 	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	height: 48px;
+
+	img{
+		width: 10px;
+		height: 10px;
+	}
 
 	span {
 		position: relative;

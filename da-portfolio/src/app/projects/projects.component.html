@@ -28,6 +28,7 @@
 			[index]="modalIndex"
 			[total]="projects.length"
 			[techMap]="technologies"
+			(nextProject)="onNextProject($event)"
 			(close)="showModal = false"
 		></app-project-modal>
 	}

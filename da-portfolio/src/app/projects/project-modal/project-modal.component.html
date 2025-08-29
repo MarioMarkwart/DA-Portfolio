@@ -1,33 +1,38 @@
-<section>
-	<header>
+<main>
+	<section class="title">
 		<h2>{{ index + 1 | number : "2.0" }}</h2>
 		<p>{{ project?.name }}</p>
-		<button (click)="onClose()">
-			<img src="assets/img/buttons/x-white.png" />
-		</button>
-	</header>
-
-	<main>
-		<div class="info">
+	</section>
+	<section class="info">
+		<div class="about">
 			<h3>What is this project about?</h3>
 			<p>{{ project?.description }}</p>
+		</div>
 
-			<div class="tech">
-				@for (tech of project?.technologies; track tech) {
-				<div class="tech-item">
-					<img [src]="techMap[tech]" [alt]="tech" />
-					<span>{{ tech }}</span>
-				</div>
-				}
+		<div class="tech">
+			@for (tech of project?.technologies; track tech) {
+			<div class="tech-item">
+				<img [src]="techMap[tech]" [alt]="tech" />
+				<span>{{ tech }}</span>
 			</div>
-
-			@if (project?.url) {
-			<a [href]="project.url" target="_blank">GitHub ↗</a>
 			}
 		</div>
+	</section>
+	<section class="links">
+		@if (project?.url) {
+		<app-button [label]="project.name" [link]="project.url" [externalLink]="true"></app-button>
+		}
+	</section>
+</main>
+<div class="preview">
+	<img [src]="project?.image" [alt]="project?.name" />
 
-		<div class="preview">
-			<img [src]="project?.image" [alt]="project?.name" />
-		</div>
-	</main>
-</section>
+	<button (click)="onClose()">
+		<img src="assets/img/buttons/x-white.png" />
+	</button>
+
+	<div class="next" (click)="next()">
+		<span>Next project</span>
+		<img src="assets/img/buttons/arrow-right-green.png" />
+	</div>
+</div>

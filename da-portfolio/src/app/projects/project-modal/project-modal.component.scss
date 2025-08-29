@@ -1,6 +1,6 @@
 @use "../../../styles.scss" as styles;
 
-section {
+:host {
 	position: fixed;
 	width: 1250px;
 	height: 650px;
@@ -12,63 +12,37 @@ section {
 	background-color: styles.$mainBackgroundColor;
 	padding: 56px 80px;
 	display: flex;
-	flex-direction: column;
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+	gap: 88px;
 }
-
-header {
+main {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	position: relative;
-
-	h2 {
-		font-family: "karla";
-		font-weight: 700;
-		font-size: 128px;
-		color: styles.$mainHighlightColor;
-		display: flex;
-		align-items: center;
-
-		&::before {
-			content: attr(data-index);
-			font-size: 56px;
-			font-weight: 900;
-			color: styles.$mainHighlightColor;
-		}
-	}
-
-	p {
-		font-family: "FiraCode-700";
-		color: white;
-		font-size: 64px;
-
-		
-	}
-
-	button {
-		position: absolute;
-		top: 0;
-		right: 0;
-		background: none;
-		border: none;
-		color: white;
-		font-size: 28px;
-		cursor: pointer;
-		transition: transform 0.2s ease;
-
-		&:hover {
-			transform: scale(1.2);
-			color: styles.$mainHighlightColor;
-		}
-	}
-}
-
-main {
-	flex: 1;
-	display: flex;
-	justify-content: space-between;
 	gap: 40px;
+	flex: 1;
+
+	.title {
+		h2 {
+			font-family: "karla";
+			font-weight: 700;
+			font-size: 128px;
+			color: styles.$mainHighlightColor;
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: attr(data-index);
+				font-size: 56px;
+				color: styles.$mainHighlightColor;
+			}
+		}
+		p {
+			color: white;
+			font-family: "FiraCode-700";
+			font-size: 64px;
+			letter-spacing: -1px;
+		}
+	}
 
 	.info {
 		flex: 1;
@@ -77,39 +51,51 @@ main {
 		flex-direction: column;
 		gap: 16px;
 
-		h3 {
-			font-size: 20px;
-			margin-bottom: 8px;
-			color: styles.$mainHighlightColor;
-		}
+		.about{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			
+			h3 {
+				font-size: 20px;
+				color: styles.$mainHighlightColor;
+				font-family: "FiraCode-700";
+				font-size: 24px;
+				line-height: 120%;
+			}
+	
+			p {
+				font-family: "karla";
+				line-height: 1.2;
+				font-size: 18px;
+			}
 
-		p {
-			line-height: 1.5;
-			font-size: 16px;
 		}
 
 		.tech {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 12px;
+			gap: 16px;
 			margin-top: 16px;
 
 			.tech-item {
 				display: flex;
 				align-items: center;
-				gap: 6px;
-				background: rgba(255, 255, 255, 0.08);
-				border-radius: 8px;
-				padding: 6px 10px;
+				gap: 4px;
+				// background: rgba(255, 255, 255, 0.08);
+				// border-radius: 8px;
+				// padding: 6px 10px;
 
 				img {
-					width: 20px;
-					height: 20px;
+					width: 24px;
+					height: 24px;
 				}
 
 				span {
-					font-size: 14px;
+					font-size: 16px;
 					color: white;
+					line-height: 1.2;
+					font-family: "karla";
 				}
 			}
 		}
@@ -130,17 +116,56 @@ main {
 			}
 		}
 	}
+}
 
-	.preview {
-		flex: 1;
+.preview {
+	position: relative;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	> img {
+		max-width: 100%;
+		border-radius: 30px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+	}
+
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: none;
+		border: none;
+		color: white;
+		font-size: 28px;
+		cursor: pointer;
+		transition: transform 0.2s ease;
+
+		&:hover {
+			transform: scale(1.2);
+			color: styles.$mainHighlightColor;
+		}
+	}
+
+	.next{
 		display: flex;
-		justify-content: center;
+		gap: 8px;
+		position: absolute;
+		right: 0;
+		bottom:0;
 		align-items: center;
+		cursor: pointer;
 
-		img {
-			max-width: 100%;
-			border-radius: 12px;
-			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+		img{
+			height: 32px;
+			width: 32px;
+		}
+		span{
+			font-family: "karla";
+			font-size: 18px;
+			color: styles.$mainHighlightColor;
+			flex-wrap: nowrap;
 		}
 	}
 }

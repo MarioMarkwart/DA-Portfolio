@@ -10,11 +10,14 @@ export class ButtonComponent {
 	@Input() label: string = 'Button';
 	@Input() type: 'button' | 'submit' = 'button';
 	@Input() link: string = '';
+	@Input() externalLink: boolean = false;
 	@Output() clicked = new EventEmitter<void>();
 
 	handleClick() {
 		if (this.link) {
-			window.location.href = this.link;
+			if (this.externalLink) {
+				window.open(this.link, '_blank');
+			} else window.location.href = this.link;
 		} else {
 			this.clicked.emit();
 		}

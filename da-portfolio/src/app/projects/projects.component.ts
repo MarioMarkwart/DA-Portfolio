@@ -62,9 +62,15 @@ export class ProjectsComponent {
 	  }
 
 	  toggleModal(project: any, index: number) {
+		console.log('TRIGGERED')
 		this.modalProject = project;
 		this.modalIndex = index;
 		this.showModal = true;
+	  }
+
+	  onNextProject(currentIndex: number) {
+		const nextIndex = (currentIndex + 1) % this.projects.length;
+		this.toggleModal(this.projects[nextIndex], nextIndex);
 	  }
 	
 }
