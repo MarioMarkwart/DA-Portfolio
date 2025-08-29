@@ -116,6 +116,11 @@ main {
 			}
 		}
 	}
+
+	.links {
+		display: flex;
+		gap: 32px;
+	}	
 }
 
 .preview {

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonComponent } from '../../button/button.component';
+import { Project } from '../project.model';
 
 @Component({
   standalone: true,
@@ -10,11 +11,12 @@ import { ButtonComponent } from '../../button/button.component';
   styleUrl: './project-modal.component.scss'
 })
 export class ProjectModalComponent {
-  @Input() project: any;
+  @Input() project!: Project;
   @Input() index!: number;
   @Input() total!: number;
-  @Input() projects: any[] = [];
+  @Input() projects: Project[] = [];
   @Input() techMap!: { [key: string]: string };
+
   @Output() close = new EventEmitter<void>();
   @Output() nextProject = new EventEmitter<number>();
 
