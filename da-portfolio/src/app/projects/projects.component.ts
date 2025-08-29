@@ -22,7 +22,7 @@ export class ProjectsComponent {
 	projects = [
 		{
 			name: 'Join',
-			technologies: ['HTML', 'CSS', 'Javascript', 'Firebase'],
+			technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
 			description: 'My personal portfolio website.',
 			image: 'assets/img/projects/Join.png',
 			url: 'https://github.com/da-portfolio/da-portfolio',
