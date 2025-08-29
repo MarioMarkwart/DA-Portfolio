@@ -26,8 +26,8 @@ export class ProjectsComponent {
       description: 'My personal portfolio website.',
       image: 'assets/img/projects/Join.png',
       url: {
-        GitHub: 'https://github.com/da-portfolio/da-portfolio',
-        Live: 'https://da-portfolio.web.app/',
+        GitHub: 'https://github.com/MarioMarkwart/Join',
+        Live: 'https://mariomarkwart.github.io/Join/',
       },
     },
     {
@@ -36,8 +36,8 @@ export class ProjectsComponent {
       description: 'My personal portfolio website.',
       image: 'assets/img/projects/Pokedex.png',
       url: {
-        GitHub: '',
-        Live: 'https://da-portfolio.web.app/',
+        GitHub: 'https://github.com/MarioMarkwart/Pokedex',
+        Live: 'https://mario-markwart.developerakademie.net/9_pokedex/',
       },
     },
     {
@@ -46,8 +46,8 @@ export class ProjectsComponent {
       description: "Jump'n'run-Game El Pollo Loco.",
       image: 'assets/img/projects/ElPolloLoco.png',
       url: {
-        GitHub: '',
-        Live: 'https://da-portfolio.web.app/',
+        GitHub: 'https://github.com/MarioMarkwart/ElPolloLoco',
+        Live: 'https://mariomarkwart.github.io/ElPolloLoco/',
       },
     },
   ];
