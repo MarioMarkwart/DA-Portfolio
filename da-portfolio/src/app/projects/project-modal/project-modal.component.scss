@@ -1,12 +1,9 @@
 @use "../../../styles.scss" as styles;
 
 :host {
-	position: fixed;
+	position: relative;
 	width: 1250px;
 	height: 650px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	border: 1px solid styles.$mainHighlightColor;
 	border-radius: 24px;
 	background-color: styles.$mainBackgroundColor;
@@ -14,7 +11,9 @@
 	display: flex;
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 	gap: 88px;
+	z-index: 1000;
 }
+
 main {
 	display: flex;
 	flex-direction: column;
@@ -29,13 +28,8 @@ main {
 			color: styles.$mainHighlightColor;
 			display: flex;
 			align-items: center;
-
-			&::before {
-				content: attr(data-index);
-				font-size: 56px;
-				color: styles.$mainHighlightColor;
-			}
 		}
+
 		p {
 			color: white;
 			font-family: "FiraCode-700";
@@ -51,25 +45,23 @@ main {
 		flex-direction: column;
 		gap: 16px;
 
-		.about{
+		.about {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
-			
+
 			h3 {
-				font-size: 20px;
+				font-size: 24px;
 				color: styles.$mainHighlightColor;
 				font-family: "FiraCode-700";
-				font-size: 24px;
 				line-height: 120%;
 			}
-	
+
 			p {
 				font-family: "karla";
 				line-height: 1.2;
 				font-size: 18px;
 			}
-
 		}
 
 		.tech {
@@ -82,9 +74,6 @@ main {
 				display: flex;
 				align-items: center;
 				gap: 4px;
-				// background: rgba(255, 255, 255, 0.08);
-				// border-radius: 8px;
-				// padding: 6px 10px;
 
 				img {
 					width: 24px;
@@ -99,28 +88,12 @@ main {
 				}
 			}
 		}
-
-		a {
-			margin-top: auto;
-			display: inline-block;
-			padding: 10px 16px;
-			border-radius: 8px;
-			background: styles.$mainHighlightColor;
-			color: black;
-			font-weight: 600;
-			text-decoration: none;
-			transition: background 0.2s ease;
-
-			&:hover {
-				background: lighten(styles.$mainHighlightColor, 10%);
-			}
-		}
 	}
 
 	.links {
 		display: flex;
 		gap: 32px;
-	}	
+	}
 }
 
 .preview {
@@ -142,35 +115,38 @@ main {
 		right: 0;
 		background: none;
 		border: none;
-		color: white;
-		font-size: 28px;
 		cursor: pointer;
 		transition: transform 0.2s ease;
 
+		img {
+			width: 28px;
+			height: 28px;
+		}
+
 		&:hover {
 			transform: scale(1.2);
-			color: styles.$mainHighlightColor;
+			filter: drop-shadow(0 0 6px styles.$mainHighlightColor);
 		}
 	}
 
-	.next{
+	.next {
 		display: flex;
 		gap: 8px;
 		position: absolute;
 		right: 0;
-		bottom:0;
+		bottom: 0;
 		align-items: center;
 		cursor: pointer;
 
-		img{
+		img {
 			height: 32px;
 			width: 32px;
 		}
-		span{
+		span {
 			font-family: "karla";
 			font-size: 18px;
 			color: styles.$mainHighlightColor;
-			flex-wrap: nowrap;
+			white-space: nowrap;
 		}
 	}
 }

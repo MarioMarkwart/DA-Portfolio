@@ -2,27 +2,28 @@
 	<main>
 		<div>
 			@for (project of projects; track project.name; let i = $index) {
-				<app-project-card
-					[project]="project"
-					(mouseenter)="onProjectHover(project, i)"
-					(mouseleave)="onMouseLeave()"
-					(click)="toggleModal(project, i)"
-				></app-project-card>
+			<app-project-card
+				[project]="project"
+				(mouseenter)="onProjectHover(project, i)"
+				(mouseleave)="onMouseLeave()"
+				(click)="toggleModal(project, i)"
+			></app-project-card>
 			}
 		</div>
 
 		<div>
 			@if (selectedProject) {
-				<app-project-img
-					[project]="selectedProject"
-					[index]="selectedIndex"
-					[total]="projects.length"
-				></app-project-img>
+			<app-project-img
+				[project]="selectedProject"
+				[index]="selectedIndex"
+				[total]="projects.length"
+			></app-project-img>
 			}
 		</div>
 	</main>
 
 	@if (showModal && modalProject) {
+	<div class="backdrop" (click)="showModal = false">
 		<app-project-modal
 			[project]="modalProject"
 			[index]="modalIndex"
@@ -30,6 +31,9 @@
 			[techMap]="technologies"
 			(nextProject)="onNextProject(modalIndex)"
 			(close)="showModal = false"
-		></app-project-modal>
+			(click)="$event.stopPropagation()"
+		>
+		</app-project-modal>
+	</div>
 	}
 </section>
