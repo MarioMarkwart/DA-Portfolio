@@ -12,6 +12,13 @@
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 	gap: 88px;
 	z-index: 1000;
+	overflow: hidden;
+	background: linear-gradient(
+		to top right,
+		styles.$gradientDark 0%,
+		styles.$gradientDark 40%,
+		styles.$gradientLight 100%
+	);
 }
 
 main {
