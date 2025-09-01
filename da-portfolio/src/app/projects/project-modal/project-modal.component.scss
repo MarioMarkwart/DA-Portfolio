@@ -120,19 +120,54 @@ main {
 		position: absolute;
 		top: 0;
 		right: 0;
-		background: none;
+		background: url("../../../../public/assets/img/buttons/x-white.png")
+			no-repeat center center;
+		background-size: contain;
+		width: 48px;
+		height: 48px;
 		border: none;
 		cursor: pointer;
-		transition: transform 0.2s ease;
+		overflow: hidden;
+		z-index: 1;
 
-		img {
-			width: 28px;
-			height: 28px;
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: url("../../../../public/assets/img/buttons/x-green.png")
+				no-repeat center center;
+			background-size: contain;
+			opacity: 0;
+			pointer-events: none;
 		}
 
-		&:hover {
-			transform: scale(1.2);
-			filter: drop-shadow(0 0 6px styles.$mainHighlightColor);
+		&:hover::after {
+			animation: fadeGreenIn 150ms forwards;
+		}
+
+		&:not(:hover)::after {
+			animation: fadeGreenOut 375ms forwards;
+		}
+	}
+
+	@keyframes fadeGreenIn {
+		0% {
+			opacity: 0.1;
+		}
+		50% {
+			opacity: 0.5;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeGreenOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
 		}
 	}
 

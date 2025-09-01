@@ -58,7 +58,7 @@ button {
 	}
 
 	&:hover {
-		border-color: var(styles.$mainHighlightColor);
+		border-color: styles.$mainHighlightColor;
 
 		span {
 			@include button-animation();
