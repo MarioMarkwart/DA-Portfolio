@@ -1,6 +1,6 @@
 @use './../../styles.scss' as styles;
 
-main {
+:host {
 	font-family: "FiraCode-400";
 	background: rgb(29, 29, 29);
 	background: linear-gradient(45deg, #1c1c1c 40%, #08463b 120%);

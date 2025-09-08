@@ -10,7 +10,7 @@
 	color: styles.$mainHighlightColor;
 }
 
-section {
+:host {
 	display: flex;
 	flex-direction: row;
 	width: 100%;

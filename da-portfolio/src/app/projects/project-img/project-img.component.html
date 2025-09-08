@@ -1,14 +1,11 @@
 @if (project) {
-	<section>
-	  <div style="position: relative; height: 100%;">
-		<div
-		  class="image-container"
-		  style="position: absolute; left: 0;"
-		  [ngStyle]="verticalStyle"
-		>
-		  <img [src]="project.image" [alt]="project.name" />
-		</div>
-	  </div>
-	</section>
-  }
-  
+<div style="position: relative; height: 100%">
+	<div
+		class="image-container"
+		style="position: absolute; left: 0"
+		[ngStyle]="verticalStyle"
+	>
+		<img [src]="project.image" [alt]="project.name" />
+	</div>
+</div>
+}

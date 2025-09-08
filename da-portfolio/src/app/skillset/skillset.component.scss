@@ -1,10 +1,9 @@
-@use '../../styles.scss' as styles;
+@use "../../styles.scss" as styles;
 
-section {
+:host {
 	height: min-content;
 	width: 100%;
 	background-color: styles.$mainBackgroundColor;
 	display: flex;
 	justify-content: space-around;
-	// align-items: center;
 }

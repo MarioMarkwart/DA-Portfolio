@@ -1,6 +1,6 @@
 @use '../../../styles.scss' as styles;
 
-.feedback-card{
+:host{
     color: white;
     background:styles.$mainHoverColor;
     border: 1px solid styles.$mainHighlightColor;

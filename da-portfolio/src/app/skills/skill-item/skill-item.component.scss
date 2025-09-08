@@ -1,6 +1,6 @@
 @use "../../../styles.scss" as styles;
 
-section {
+:host {
 	transform: translateY(24px);
 	display: grid;
 	grid-template-columns: 1fr;
