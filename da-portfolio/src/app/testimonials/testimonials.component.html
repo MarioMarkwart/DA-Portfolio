@@ -1,12 +1,21 @@
 <h1>What my colleagues say about me</h1>
-<div class="single-feedback-container">
-	@for (testimonial of testimonials; track $index){
+<div class="single-feedback-container" #carousel>
+	@for (testimonial of testimonials; track $index) {
 	<app-single-feedback
-		[class.not-in-focus]="$index % 2 === 0"
+		[class.not-in-focus]="$index !== activeIndex"
 		[testimonial]="testimonial"
+		#card
 	></app-single-feedback>
 	}
 </div>
+
 <div class="button-container">
-	<button>TEXT</button><button>TEXT2</button><button>TEXT3</button>
+	<div class="btn-prev" (click)="prev()"></div>
+
+	<div class="dots">
+		@for (testimonial of testimonials; track $index) {
+		<div class="dot" [class.marked]="$index === activeIndex"></div>
+		}
+	</div>
+	<div class="btn-next" (click)="next()"></div>
 </div>

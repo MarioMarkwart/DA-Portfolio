@@ -1,28 +1,81 @@
 @use "../../styles.scss" as styles;
 
-:host{
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: styles.$mainBackgroundColor;
-    gap: 50px;
-    align-items: center;
+:host {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: styles.$mainBackgroundColor;
+	gap: 50px;
+	align-items: center;
 
-    .single-feedback-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 64px;
-    }
+	.single-feedback-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 64px;
+	}
 }
 
-.not-in-focus{
-    transform: scale(.9);
-    transition: transform 0.3s ease;
-    background-color: linear-gradient(90deg, rgba(61,207,182,1) 0%, rgba(61,207,182,0) 100%) !important;
+.not-in-focus {
+	transform: scale(0.9);
+	transition: transform 0.3s ease;
+	background-color: linear-gradient(
+		90deg,
+		rgba(61, 207, 182, 1) 0%,
+		rgba(61, 207, 182, 0) 100%
+	) !important;
 }
 
-h1{
-    font-size: 32px;
-    letter-spacing: 0%;
+h1 {
+	font-size: 32px;
+	letter-spacing: 0%;
+}
+
+.button-container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	.btn-prev,
+	.btn-next {
+		border: 2px solid yellow;
+		background-position: center;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+
+		transition: all 0.2s ease;
+	}
+
+	.btn-prev {
+		background-image: url("../../../public/assets/img/buttons/arrow-back-white.png");
+
+		&:hover {
+			background-image: url("../../../public/assets/img/buttons/arrow-back-green.png");
+		}
+	}
+	.btn-next {
+		background-image: url("../../../public/assets/img/buttons/arrow-forward-white.png");
+
+		&:hover {
+			background-image: url("../../../public/assets/img/buttons/arrow-forward-green.png");
+		}
+	}
+
+	.dots {
+		display: flex;
+		gap: 20px;
+
+		.dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: background-color 0.3s ease;
+		}
+
+		.marked {
+			background-color: styles.$mainHighlightColor;
+		}
+	}
 }
