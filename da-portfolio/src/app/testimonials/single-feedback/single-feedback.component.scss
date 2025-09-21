@@ -1,12 +1,40 @@
-@use '../../../styles.scss' as styles;
+@use "../../../styles.scss" as styles;
 
-:host{
-    color: white;
-    background:styles.$mainHoverColor;
-    border: 1px solid styles.$mainHighlightColor;
-    width: 630px;
-    height: 290px;
-    border-radius: 25px;
-    padding: 20px;
-    transition: transform 0.3s ease;
+:host {
+	color: white;
+	background: styles.$mainHoverColor;
+	border: 1px solid styles.$mainHighlightColor;
+	width: 632px;
+	max-height: 274px;
+	border-radius: 25px;
+	padding: 20px;
+	transition: transform 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 40px;
+	overflow-y: hidden;
+	gap: 33px;
+	font-family: "karla";
+	font-size: 20px;
+	line-height: 1.2;
+
+	> p {
+		overflow: hidden;
+		height: 90%;
+	}
+	> div {
+		font-size: 18px;
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		align-items: center;
+		gap: 18px;
+
+		> .spacer {
+			flex-grow: 1;
+			border-bottom: 1px solid white;
+			height: 1px;
+		}
+	}
 }

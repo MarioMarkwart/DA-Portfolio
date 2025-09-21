@@ -1,25 +1,30 @@
 <h1>What my colleagues say about me</h1>
 
 <div class="carousel-wrapper">
-    <div class="single-feedback-container" #carousel>
-        @for (testimonial of testimonials; track $index) {
-            <app-single-feedback
-                #card
-                [class.not-in-focus]="$index !== activeIndex"
-                [testimonial]="testimonial"
-            ></app-single-feedback>
-        }
-    </div>
+	<div class="single-feedback-container" #carousel>
+		<div class="carousel-spacer"></div>
+
+		@for (testimonial of testimonials; track $index) {
+		<app-single-feedback
+			#card
+			[class.not-in-focus]="$index !== activeIndex"
+			[testimonial]="testimonial"
+		></app-single-feedback>
+		}
+
+		<div class="carousel-spacer"></div>
+	</div>
+	<div class="gradient-overlay"></div>
 </div>
 
 <div class="button-container">
-    <div class="btn-prev" (click)="prev()"></div>
+	<div class="btn-prev" (click)="prev()"></div>
 
-    <div class="dots">
-        @for (testimonial of testimonials; track $index) {
-            <div class="dot" [class.marked]="$index === activeIndex"></div>
-        }
-    </div>
+	<div class="dots">
+		@for (testimonial of testimonials; track $index) {
+		<div class="dot" [class.marked]="$index === activeIndex"></div>
+		}
+	</div>
 
-    <div class="btn-next" (click)="next()"></div>
+	<div class="btn-next" (click)="next()"></div>
 </div>
