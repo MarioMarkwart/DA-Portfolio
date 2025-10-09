@@ -1,0 +1,65 @@
+@use "../../styles.scss" as styles;
+
+:host {
+	display: flex;
+	background-color: styles.$mainBackgroundColor;
+	color: #fff;
+}
+
+.textBox {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+form {
+	.border {
+		width: 200px;
+		height: 1px;
+		border: 1px solid #3dcfb680;
+	}
+
+	.inputBox {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		padding: 32px;
+
+		input {
+			border: none;
+			background-color: transparent;
+			color: #fff;
+			outline: none;
+
+			&::placeholder {
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+
+	.inputBox:hover input::placeholder,
+	.inputBox:has(input:focus) input::placeholder {
+		color: #fff;
+	}
+
+	.border:has(+ .inputBox:hover),
+	.inputBox:hover + .border {
+		border: 1px solid #3dcfb6;
+	}
+
+	.border:has(+ .inputBox:has(input:focus)),
+	.inputBox:has(input:focus) + .border {
+		border: 1px solid #3dcfb6;
+	}
+
+	a {
+		text-decoration: none;
+		color: styles.$mainHighlightColor;
+
+		&:hover {
+			padding: 0 0 5px 0;
+			border-bottom: 1px solid styles.$mainHighlightColor;
+			color: #fff;
+		}
+	}
+}

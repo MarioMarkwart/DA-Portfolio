@@ -1,1 +1,73 @@
-<p>contact works!</p>
+<section class="textBox">
+	<h2>Contact me</h2>
+	<h1>Let's work together</h1>
+	<h2>Got a problem to solve?</h2>
+	<p>
+		Encourage people to contact you and describe what role you are
+		interested in. Show that you will add value to their projects through
+		your work.
+	</p>
+	<p>Need a Frontend developer? Let's talk!</p>
+</section>
+<form
+	class="formContainer"
+	(ngSubmit)="onSubmit(contactForm)"
+	#contactForm="ngForm"
+>
+	<div class="border"></div>
+	<div class="inputBox">
+		<label for="name">What's your name?</label>
+		<input
+			[(ngModel)]="contactData.name"
+			type="text"
+			id="name"
+			name="name"
+			placeholder="Your name goes here"
+			required
+		/>
+	</div>
+	<div class="border"></div>
+	<div class="inputBox" focus>
+		<label for="email">What's your email?</label>
+		<input
+			[(ngModel)]="contactData.email"
+			type="email"
+			id="email"
+			name="email"
+			placeholder="youremail@email.com"
+			required
+			pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+		/>
+	</div>
+	<div class="border"></div>
+	<div class="inputBox">
+		<label for="message">How can I help you?</label>
+		<textarea
+			[(ngModel)]="contactData.message"
+			#message="ngModel"
+			minlength="4"
+			type="text"
+			id="message"
+			name="message"
+			style="height: 200px"
+			placeholder="Hello Mario, I'm interested in"
+			required
+		></textarea>
+		@if (!message. valid && message. touched && !message.disabled) {
+			<span>Please enter a message</span>
+		}
+	</div>
+	<div class="border"></div>
+	<input
+		[(ngModel)]="contactData.privacy"
+		id="privacy"
+		type="checkbox"
+		required
+		name="privacy"
+	/>
+	<label for="privacy"
+		>I've read the<a href="" target="_blank"> privacy policy </a>and agree
+		to the processing of my data as outlined.</label
+	>
+	<input type="submit" [disabled]="!contactForm.valid" />
+</form>
