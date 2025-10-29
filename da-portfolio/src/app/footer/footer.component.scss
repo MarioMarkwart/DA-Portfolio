@@ -1,0 +1,78 @@
+@use "../../styles.scss" as styles;
+
+:host {
+	display: flex;
+	background-color: styles.$mainBackgroundColor;
+	color: #fff;
+	justify-content: space-between;
+	font-family: karla;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.left {
+	display: inherit;
+	gap: 36px;
+
+	.logo {
+		content: url("../../../public/assets/img/name-normal.png");
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		height: 48px;
+
+		&:hover {
+			cursor: pointer;
+			content: url("../../../public/assets/img/name-outline-test.png");
+		}
+	}
+
+	.text {
+		gap: 16px;
+	}
+}
+
+.center {
+	font-family: "FiraCode-400";
+	color: styles.$mainHighlightColor;
+	font-size: 20px;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.link {
+		transition: color 275ms ease;
+		position: relative;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			transform: translateX(-12px);
+			border-radius: 100%;
+			background: styles.$mainHighlightColor;
+			height: 8px;
+			width: 8px;
+			opacity: 0;
+			transition: opacity 275ms ease;
+		}
+
+		&:hover {
+			color: styles.$mainHighlightColor;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}
