@@ -1,4 +1,4 @@
-@use './../../styles.scss' as styles;
+@use "./../../styles.scss" as styles;
 
 :host {
 	font-family: "FiraCode-400";
@@ -46,18 +46,25 @@
 }
 
 .right {
-	content: url("../../../public/assets/img/name-normal.png");
+	position: relative;
 	font-family: "FiraCode-400";
 	display: flex;
 	align-items: center;
 	gap: 8px;
-
-	&:hover {
-		cursor: pointer;
-		content: url("../../../public/assets/img/name-outline-test.png");
-	}
+	width: 200px;
 
 	> img {
+		position: absolute;
 		height: 48px;
+		transition: opacity 100ms ease-in;
+		cursor: pointer;
+	}
+
+	&:hover #img-normal {
+		opacity: 0;
+	}
+
+	&:hover #img-outline {
+		opacity: 1;
 	}
 }
