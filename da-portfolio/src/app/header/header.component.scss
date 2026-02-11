@@ -28,19 +28,21 @@
 		transition: all 0.3s ease-in-out;
 
 		&::after {
-			transition: all 1s ease;
-		}
-
-		&:hover::after {
+			content: "";
 			transform: translateX(-50%);
 			border-radius: 100%;
 			position: absolute;
 			background: #3dcfb6;
 			bottom: -8px;
 			height: 8px;
-			content: "";
 			width: 8px;
 			left: 50%;
+			opacity: 0;
+			transition: opacity 150ms ease-in-out;
+		}
+
+		&:hover::after {
+			opacity: 1;
 		}
 	}
 }
