@@ -15,7 +15,7 @@
 	width: 568px;
 	height: 568px;
 
-	&:hover {
+	// &:hover {
 		&::before {
 			content: "";
 			position: absolute;
@@ -28,7 +28,7 @@
 			transform: translate(-46px, 30px);
 			border-radius: 30px;
 		}
-	}
+	// }	
 }
 
 .image-container img {
