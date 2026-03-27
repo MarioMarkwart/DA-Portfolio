@@ -6,22 +6,23 @@
 	@keyframes slideText {
 		0% {
 			transform: translateX(0);
-			color: white;
 		}
 		40% {
 			color: $color;
 		}
 		50% {
-			transform: translateX(-100%);
+			transform: translateX(-200%);
 			color: $color;
 		}
+		55%{
+			transform: translateY(100px)
+		}
 		60% {
-			transform: translateX(100%);
+			transform: translateX(200%);
 			color: $color;
 		}
 		100% {
 			transform: translateX(0);
-			color: white;
 		}
 	}
 }
@@ -30,6 +31,7 @@ button {
 	position: relative;
 	padding: 13px 24px;
 	border: 2px solid white;
+	transition: border-color .1s ease;
 	border-radius: 25px;
 	background-color: transparent;
 	color: white;
@@ -58,6 +60,7 @@ button {
 	}
 
 	&:hover {
+		transition: border-color 0.5s ease;
 		border-color: styles.$mainHighlightColor;
 
 		span {

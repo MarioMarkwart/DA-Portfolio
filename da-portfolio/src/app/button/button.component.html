@@ -1,7 +1,5 @@
 <button [type]="type" (click)="handleClick()" >
-	@for (char of label.split(""); track $index) {
-		<span>{{ char }}</span>
-	}
+	<span>{{label}}</span>
 	@if (externalLink){
 		<img src="assets/img/buttons/arrow-outward-green.png" alt="external link">
 	}
