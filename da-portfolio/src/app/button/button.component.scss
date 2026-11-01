@@ -1,4 +1,4 @@
-@use '../../styles.scss' as styles;
+﻿@use '../../styles.scss' as styles;
 
 @mixin button-animation($color: #3dcfb6) {
 	animation: slideText 2s linear infinite;
