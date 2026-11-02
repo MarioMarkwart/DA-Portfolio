@@ -33,6 +33,7 @@
 		max-width: min-content;
 		align-self: center;
 		justify-self: center;
+		user-select: none;
 
 		&:hover img {
 			transform: scale(1.1);
